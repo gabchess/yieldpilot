@@ -33,7 +33,7 @@ function StatCard({
       </p>
       {subValue && (
         <p className={`text-xs font-mono mt-1 ${
-          trend === 'up' ? 'text-accent-green' :
+          trend === 'up' ? 'text-emerald-400' :
           trend === 'down' ? 'text-accent-red' :
           'text-text-tertiary'
         }`}>
@@ -245,7 +245,7 @@ export default function PortfolioDashboard() {
         <div>
           <div className="flex items-center justify-between mb-3">
             <h3 className="text-sm font-semibold text-text-primary">Top Yield Opportunities</h3>
-            <span className="text-xs text-accent-green font-medium">Live data</span>
+            <span className="text-xs text-accent-blue font-medium">Live data</span>
           </div>
           {yieldsLoading ? (
             <div className="space-y-2">
@@ -277,12 +277,12 @@ export default function PortfolioDashboard() {
         <button
           onClick={handleExecuteStrategy}
           disabled={isExecuting}
-          className={`w-full py-4 rounded-xl font-bold text-base text-gray-950
+          className={`w-full py-4 rounded-xl font-bold text-base text-white
             transition-all flex items-center justify-center gap-2.5 cursor-pointer
             disabled:cursor-not-allowed disabled:opacity-50
             ${isExecuting
               ? 'bg-accent-green/70'
-              : 'bg-gradient-to-r from-emerald-500 via-accent-green to-teal-400 hover:brightness-110 animate-btn-pulse-glow'
+              : 'bg-gradient-to-r from-[#2a4ab8] via-accent-green to-accent-blue hover:brightness-110 animate-btn-pulse-glow'
             }`}
         >
           {isExecuting ? (

@@ -84,7 +84,7 @@ export default function YieldCard({
           </div>
         </div>
         <div className="text-right">
-          <p className="text-sm font-mono font-semibold text-accent-green">
+          <p className="text-sm font-mono font-semibold text-emerald-400">
             {apy.toFixed(2)}%
           </p>
           {amount && (
@@ -136,8 +136,8 @@ export default function YieldCard({
 
         {/* APY Badge */}
         <div className="flex flex-col items-end">
-          <div className="px-2.5 py-1 rounded-lg bg-accent-green/10 border border-accent-green/20">
-            <span className="text-sm font-mono font-bold text-accent-green">
+          <div className="px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+            <span className="text-sm font-mono font-bold text-emerald-400">
               {apy.toFixed(2)}%
             </span>
           </div>

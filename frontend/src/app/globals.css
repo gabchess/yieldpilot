@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #030712;
+  --background: #0A0F1E;
   --foreground: #f1f5f9;
   --card: #0f172a;
   --card-hover: #1e293b;
   --input: #1e293b;
   --border: #1e293b;
   --border-hover: #334155;
-  --accent-green: #10b981;
-  --accent-green-dim: #065f46;
+  --accent-green: #375BD2;
+  --accent-green-dim: #1A2B6B;
   --accent-red: #ef4444;
-  --accent-blue: #3b82f6;
-  --accent-purple: #8b5cf6;
+  --accent-blue: #6B8AFF;
+  --accent-purple: #6B8AFF;
   --accent-amber: #f59e0b;
-  --text-primary: #f1f5f9;
+  --text-primary: #FFFFFF;
   --text-secondary: #94a3b8;
   --text-tertiary: #64748b;
 }
@@ -95,7 +95,7 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #375BD2, #6B8AFF, #375BD2);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: xor;
@@ -142,10 +142,10 @@ body {
 /* Pulse glow for Execute Strategy button */
 @keyframes btn-pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 8px rgba(16, 185, 129, 0.3), 0 4px 16px rgba(16, 185, 129, 0.15);
+    box-shadow: 0 0 8px rgba(55, 91, 210, 0.3), 0 4px 16px rgba(55, 91, 210, 0.15);
   }
   50% {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5), 0 4px 24px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 20px rgba(55, 91, 210, 0.5), 0 4px 24px rgba(55, 91, 210, 0.3);
   }
 }
 
@@ -155,8 +155,8 @@ body {
 
 /* Hover glow effect for yield cards */
 .yield-card-glow:hover {
-  border-color: rgba(16, 185, 129, 0.3);
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.08), 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: rgba(55, 91, 210, 0.3);
+  box-shadow: 0 0 12px rgba(55, 91, 210, 0.08), 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Glass morphism effect */

@@ -53,7 +53,7 @@ function MessageBubble({ message }: { message: ChatMessage }) {
           className={`
             rounded-2xl px-4 py-3 text-sm leading-relaxed break-words
             ${isUser
-              ? 'bg-accent-green text-gray-950 rounded-tr-sm'
+              ? 'bg-accent-green text-white rounded-tr-sm'
               : 'bg-card border border-border rounded-tl-sm text-text-primary'
             }
           `}
@@ -73,7 +73,7 @@ function MessageBubble({ message }: { message: ChatMessage }) {
                 Recommended Allocation
               </h4>
               {message.projectedApy && (
-                <span className="text-xs font-mono font-bold text-accent-green">
+                <span className="text-xs font-mono font-bold text-emerald-400">
                   {message.projectedApy.toFixed(2)}% projected
                 </span>
               )}
@@ -279,7 +279,7 @@ export default function ChatInterface() {
           <button
             onClick={() => handleSend()}
             disabled={!input.trim() || isLoading}
-            className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent-green text-gray-950 flex items-center justify-center
+            className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent-green text-white flex items-center justify-center
               hover:bg-accent-green/90 disabled:opacity-30 disabled:cursor-not-allowed transition-all
               shadow-lg shadow-accent-green/20 disabled:shadow-none cursor-pointer"
           >

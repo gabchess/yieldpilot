@@ -65,7 +65,7 @@ export default function Header() {
               transition-all duration-200 cursor-pointer
               ${walletConnected
                 ? 'bg-accent-green/10 border border-accent-green/30 text-accent-green hover:bg-accent-green/20'
-                : 'bg-accent-green text-gray-950 hover:bg-accent-green/90 shadow-lg shadow-accent-green/20'
+                : 'bg-accent-green text-white hover:bg-accent-green/90 shadow-lg shadow-accent-green/20'
               }
             `}
           >
