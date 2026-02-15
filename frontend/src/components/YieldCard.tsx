@@ -62,7 +62,7 @@ export default function YieldCard({
 
   if (compact) {
     return (
-      <div className="flex items-center justify-between py-2.5 px-3 rounded-lg bg-input/50 hover:bg-input transition-colors">
+      <div className="flex items-center justify-between py-2.5 px-3 rounded-lg bg-input/50 hover:bg-input hover:scale-[1.01] transition-all duration-200">
         <div className="flex items-center gap-3">
           <div
             className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold text-white"
@@ -98,7 +98,7 @@ export default function YieldCard({
   }
 
   return (
-    <div className="group relative bg-card border border-border rounded-xl p-4 hover:border-border-hover transition-all duration-200">
+    <div className="group relative bg-card border border-border rounded-xl p-4 hover:border-border-hover hover:scale-[1.02] yield-card-glow transition-all duration-200">
       {/* Percentage bar */}
       {percentage !== undefined && (
         <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-xl overflow-hidden">

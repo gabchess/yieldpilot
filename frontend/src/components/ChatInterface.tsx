@@ -229,7 +229,9 @@ export default function ChatInterface() {
       {/* Messages area */}
       <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
         {messages.map((msg) => (
-          <MessageBubble key={msg.id} message={msg} />
+          <div key={msg.id} className="animate-fade-in-up">
+            <MessageBubble message={msg} />
+          </div>
         ))}
         {isLoading && <TypingIndicator />}
 

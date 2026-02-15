@@ -142,7 +142,7 @@ export default function PortfolioDashboard() {
   );
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto">
+    <div className="flex flex-col h-full overflow-y-auto relative pb-24">
       <div className="p-5 space-y-5">
         {/* Stats grid */}
         <div className="grid grid-cols-2 gap-3">
@@ -250,7 +250,7 @@ export default function PortfolioDashboard() {
           {yieldsLoading ? (
             <div className="space-y-2">
               {[...Array(3)].map((_, i) => (
-                <div key={i} className="h-14 bg-card border border-border rounded-lg animate-pulse"></div>
+                <div key={i} className="h-14 rounded-lg animate-shimmer border border-border"></div>
               ))}
             </div>
           ) : (
@@ -270,24 +270,31 @@ export default function PortfolioDashboard() {
           )}
         </div>
 
-        {/* Execute Strategy Button */}
+      </div>
+
+      {/* Sticky Execute Strategy Button */}
+      <div className="sticky bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background via-background to-transparent">
         <button
           onClick={handleExecuteStrategy}
           disabled={isExecuting}
-          className="w-full py-3.5 rounded-xl bg-accent-green text-gray-950 font-semibold text-sm
-            hover:bg-accent-green/90 disabled:opacity-50 transition-all shadow-lg shadow-accent-green/20
-            flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed"
+          className={`w-full py-4 rounded-xl font-bold text-base text-gray-950
+            transition-all flex items-center justify-center gap-2.5 cursor-pointer
+            disabled:cursor-not-allowed disabled:opacity-50
+            ${isExecuting
+              ? 'bg-accent-green/70'
+              : 'bg-gradient-to-r from-emerald-500 via-accent-green to-teal-400 hover:brightness-110 animate-btn-pulse-glow'
+            }`}
         >
           {isExecuting ? (
             <>
-              <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className="w-5 h-5 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 12a9 9 0 1 1-6.219-8.56" />
               </svg>
               Executing Strategy...
             </>
           ) : (
             <>
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polygon points="5 3 19 12 5 21 5 3" />
               </svg>
               Execute Strategy
