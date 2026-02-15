@@ -154,9 +154,10 @@ export async function POST(request: NextRequest) {
     const claudeData = await claudeResponse.json();
     const responseText = claudeData.content?.[0]?.text || '';
 
-    // Try to parse JSON from Claude's response
+    // Try to parse JSON from Claude's response (strip markdown fences if present)
     try {
-      const parsed: ClaudeResponse = JSON.parse(responseText);
+      const jsonStr = responseText.replace(/^```(?:json)?\s*\n?/m, '').replace(/\n?```\s*$/m, '').trim();
+      const parsed: ClaudeResponse = JSON.parse(jsonStr);
       return NextResponse.json(parsed);
     } catch {
       // If Claude didn't return valid JSON, wrap the text response
