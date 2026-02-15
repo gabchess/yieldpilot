@@ -1,0 +1,17 @@
+{
+  "name": "yieldpilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Your AI copilot for cross-chain yield optimization",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "contracts:build": "cd contracts && forge build",
+    "contracts:test": "cd contracts && forge test",
+    "contracts:deploy:sepolia": "cd contracts && forge script script/Deploy.s.sol --rpc-url sepolia --broadcast",
+    "contracts:deploy:arb-sepolia": "cd contracts && forge script script/Deploy.s.sol --rpc-url arbitrum-sepolia --broadcast"
+  },
+  "workspaces": [
+    "frontend"
+  ]
+}
