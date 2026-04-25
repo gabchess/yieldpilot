@@ -6,16 +6,6 @@ YieldPilot is an AI-powered DeFi yield optimizer built on Chainlink's Compute Ru
 
 ---
 
-## Screenshots
-
-![YieldPilot Dashboard](screenshot.png)
-*Main dashboard -- portfolio overview, live yield rates, and strategy controls.*
-
-![AI Chat Response](screenshot-chat.png)
-*Claude analyzes opportunities and recommends an optimal yield allocation.*
-
----
-
 ## Architecture
 
 ```
