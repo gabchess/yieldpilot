@@ -2,9 +2,6 @@
 
 **Your AI copilot for cross-chain yield optimization**
 
-[![Built for Chainlink Convergence Hackathon 2026](https://img.shields.io/badge/Chainlink-Convergence%20Hackathon%202026-375BD2?style=for-the-badge&logo=chainlink&logoColor=white)](https://chain.link)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-00C853?style=for-the-badge)](https://yieldpilot-app.vercel.app)
-
 YieldPilot is an AI-powered DeFi yield optimizer built on Chainlink's Compute Runtime Environment (CRE). It combines real-time yield data from DeFi Llama, AI-driven strategy analysis via Claude, and cross-chain execution through CCIP to help users maximize stablecoin returns across multiple chains and protocols -- all from a single conversational interface.
 
 ---
@@ -196,15 +193,3 @@ All contracts are built with Solidity 0.8.20 and tested using Foundry with [chai
 |---|---|
 | **Primary:** DeFi & Tokenization | $20K |
 | **Secondary:** CRE & AI | $17K |
-
----
-
-## Live Demo
-
-**[https://yieldpilot-app.vercel.app](https://yieldpilot-app.vercel.app)**
-
----
-
-## Team
-
-Built by **Gabe & Aria** for the Chainlink Convergence Hackathon 2026.
